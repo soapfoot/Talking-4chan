@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="imageboard,image board,anime,manga,ecchi,hentai,video games,english,japan"/>
+<meta name="description" content="4chan is a simple image-based bulletin board where anyone can post comments and share images."/>
+<meta name="robots" content="noarchive"/>
+<title>4chan</title>
+<link rel="stylesheet" type="text/css" href="//s.4cdn.org/css/yui.2.css"/>
+<link rel="stylesheet" type="text/css" href="//s.4cdn.org/css/global.24.css"/>
+<link rel="shortcut icon" href="//s.4cdn.org/image/favicon.ico"/>
+<link rel="apple-touch-icon" href="//s.4cdn.org/image/apple-touch-icon-iphone.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="//s.4cdn.org/image/apple-touch-icon-ipad.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="//s.4cdn.org/image/apple-touch-icon-iphone-retina.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="//s.4cdn.org/image/apple-touch-icon-ipad-retina.png"/>
+ 
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create','UA-166538-1','auto');
+ga('set', 'anonymizeIp', true);
+ga('send','pageview')</script>
+ 
+<script type="text/javascript">
+  var PostList = { posts: {} };
+  PostList.set = function(type, data) { this.posts[type] = data; };
+  PostList.get = function(type, pid) { return this.posts[type][pid]; };
+</script></head>
+<body>
+<div id="doc">
+<div id="hd">
+<div id="logo">
+<h1><a href="//www.4chan.org/" title="Home">4chan</a></h1>
+</div>
+</div>
+<div id="bd">
+<div class="box-outer" id="announce">
+<div class="box-inner">
+<div class="boxbar">
+<h2>What is 4chan?</h2>
+<a id="close-announce" href="#" class="closebutton"></a>
+</div>
+<div class="boxcontent">
+<p>4chan is a simple image-based bulletin board where anyone can post comments and share images. There are boards dedicated to a variety of topics, from Japanese animation and culture to videogames, music, and photography. Users do not need to register an account before participating in the community. Feel free to click on a board that interests you and jump right in!</p>
+<br/>
+<p>Be sure to familiarize yourself with the <a href="/rules">rules</a> before posting, and read the <a href="/faq">FAQ</a> if you wish to learn more.</p>
+</div>
+</div>
+</div>
+<div class="box-outer top-box" id="boards">
+<div class="box-inner">
+<div class="boxbar">
+<h2>Boards</h2>
+<div id="filter-container" class="yui-skin-sam menubutton"></div>
+</div>
+<div class="boxcontent">
+<div class="column">
+<h3 style="text-decoration: underline; display: inline;">Japanese Culture</h3>
+<ul>
+<li><a href="//boards.4chan.org/a/" class="boardlink" title="Anime &amp; Manga">Anime &amp; Manga</a></li>
+<li><a href="//boards.4chan.org/c/" class="boardlink" title="Anime/Cute">Anime/Cute</a></li>
+<li><a href="//boards.4chan.org/w/" class="boardlink" title="Anime/Wallpapers">Anime/Wallpapers</a></li>
+<li><a href="//boards.4chan.org/m/" class="boardlink" title="Mecha">Mecha</a></li>
+<li><a href="//boards.4chan.org/cgl/" class="boardlink" title="Cosplay &amp; EGL">Cosplay &amp; EGL</a></li>
+<li><a href="//boards.4chan.org/cm/" class="boardlink" title="Cute/Male">Cute/Male</a></li>
+<li><a href="//boards.4chan.org/f/" class="boardlink" title="Flash">Flash</a></li>
+<li><a href="//boards.4chan.org/n/" class="boardlink" title="Transportation">Transportation</a></li>
+<li><a href="//boards.4chan.org/jp/" class="boardlink" title="Otaku Culture">Otaku Culture</a></li>
+<li><a href="//boards.4chan.org/vp/" class="boardlink" title="Pokémon">Pokémon</a></li>
+</ul>
+</div>
+<div class="column">
+<h3 style="text-decoration: underline; display: inline;">Interests</h3>
+<ul>
+<li><a href="//boards.4chan.org/v/" class="boardlink" title="Video Games">Video Games</a></li>
+<li><a href="//boards.4chan.org/vg/" class="boardlink" title="Video Game Generals">Video Game Generals</a></li>
+<li><a href="//boards.4chan.org/vr/" class="boardlink" title="Retro Games">Retro Games</a></li>
+<li><a href="//boards.4chan.org/co/" class="boardlink" title="Comics &amp; Cartoons">Comics &amp; Cartoons</a></li>
+<li><a href="//boards.4chan.org/g/" class="boardlink" title="Technology">Technology</a></li>
+<li><a href="//boards.4chan.org/tv/" class="boardlink" title="Television &amp; Film">Television &amp; Film</a></li>
+<li><a href="//boards.4chan.org/k/" class="boardlink" title="Weapons">Weapons</a></li>
+<li><a href="//boards.4chan.org/o/" class="boardlink" title="Auto">Auto</a></li>
+<li><a href="//boards.4chan.org/an/" class="boardlink" title="Animals &amp; Nature">Animals &amp; Nature</a></li>
+<li><a href="//boards.4chan.org/tg/" class="boardlink" title="Traditional Games">Traditional Games</a></li>
+<li><a href="//boards.4chan.org/sp/" class="boardlink" title="Sports">Sports</a></li>
+<li><a href="//boards.4chan.org/asp/" class="boardlink" title="Alternative Sports">Alternative Sports</a></li>
+<li><a href="//boards.4chan.org/sci/" class="boardlink" title="Science &amp; Math">Science &amp; Math</a></li>
+<li><a href="//boards.4chan.org/int/" class="boardlink" title="International">International</a></li>
+<li><a href="//boards.4chan.org/out/" class="boardlink" title="Outdoors">Outdoors</a></li>
+<li><a href="//boards.4chan.org/toy/" class="boardlink" title="Toys">Toys</a></li>
+<li><a href="//boards.4chan.org/biz/" class="boardlink" title="Business &amp; Finance">Business &amp; Finance</a></li>
+</ul>
+</div>
+<div class="column">
+<h3 style="text-decoration: underline; display: inline;">Creative</h3>
+<ul>
+<li><a href="//boards.4chan.org/i/" class="boardlink" title="Oekaki">Oekaki</a></li>
+<li><a href="//boards.4chan.org/po/" class="boardlink" title="Papercraft &amp; Origami">Papercraft &amp; Origami</a></li>
+<li><a href="//boards.4chan.org/p/" class="boardlink" title="Photography">Photography</a></li>
+<li><a href="//boards.4chan.org/ck/" class="boardlink" title="Food &amp; Cooking">Food &amp; Cooking</a></li>
+<li><a href="//boards.4chan.org/ic/" class="boardlink" title="Artwork/Critique">Artwork/Critique</a></li>
+<li><a href="//boards.4chan.org/wg/" class="boardlink" title="Wallpapers/General">Wallpapers/General</a></li>
+<li><a href="//boards.4chan.org/mu/" class="boardlink" title="Music">Music</a></li>
+<li><a href="//boards.4chan.org/fa/" class="boardlink" title="Fashion">Fashion</a></li>
+<li><a href="//boards.4chan.org/3/" class="boardlink" title="3DCG">3DCG</a></li>
+<li><a href="//boards.4chan.org/gd/" class="boardlink" title="Graphic Design">Graphic Design</a></li>
+<li><a href="//boards.4chan.org/diy/" class="boardlink" title="Do-It-Yourself">Do-It-Yourself</a></li>
+<li><a href="//boards.4chan.org/wsg/" class="boardlink" title="Worksafe GIF">Worksafe GIF</a></li>
+</ul>
+</div>
+<div class="column">
+<h3 style="text-decoration: underline; display: inline;">Adult</h3> <h3 style="display: inline;"><span class="warning" title="Not Safe For Work"><sup style="vertical-align: text-bottom;">(NSFW)</sup></span></h3>
+<ul>
+<li><a href="//boards.4chan.org/s/" class="boardlink" title="Sexy Beautiful Women">Sexy Beautiful Women</a></li>
+<li><a href="//boards.4chan.org/hc/" class="boardlink" title="Hardcore">Hardcore</a></li>
+<li><a href="//boards.4chan.org/hm/" class="boardlink" title="Handsome Men">Handsome Men</a></li>
+<li><a href="//boards.4chan.org/h/" class="boardlink" title="Hentai">Hentai</a></li>
+<li><a href="//boards.4chan.org/e/" class="boardlink" title="Ecchi">Ecchi</a></li>
+<li><a href="//boards.4chan.org/u/" class="boardlink" title="Yuri">Yuri</a></li>
+<li><a href="//boards.4chan.org/d/" class="boardlink" title="Hentai/Alternative">Hentai/Alternative</a></li>
+<li><a href="//boards.4chan.org/y/" class="boardlink" title="Yaoi">Yaoi</a></li>
+<li><a href="//boards.4chan.org/t/" class="boardlink" title="Torrents">Torrents</a></li>
+<li><a href="//boards.4chan.org/hr/" class="boardlink" title="High Resolution">High Resolution</a></li>
+<li><a href="//boards.4chan.org/gif/" class="boardlink" title="Adult GIF">Adult GIF</a></li>
+</ul>
+</div>
+<div class="column">
+<h3 style="text-decoration: underline; display: inline;">Other</h3>
+<ul>
+<li><a href="//boards.4chan.org/trv/" class="boardlink" title="Travel">Travel</a></li>
+<li><a href="//boards.4chan.org/fit/" class="boardlink" title="Fitness">Fitness</a></li>
+<li><a href="//boards.4chan.org/x/" class="boardlink" title="Paranormal">Paranormal</a></li>
+<li><a href="//boards.4chan.org/lit/" class="boardlink" title="Literature">Literature</a></li>
+<li><a href="//boards.4chan.org/adv/" class="boardlink" title="Advice">Advice</a></li>
+<li><a href="//boards.4chan.org/lgbt/" class="boardlink" title="LGBT">LGBT</a></li>
+<li><a href="//boards.4chan.org/mlp/" class="boardlink" title="Pony">Pony</a></li>
+</ul>
+<h3 style="text-decoration: underline; display: inline;">Misc.</h3> <h3 style="display: inline;"><span class="warning" title="Not Safe For Work"><sup style="vertical-align: text-bottom;">(NSFW)</sup></span></h3>
+<ul>
+<li><a href="//boards.4chan.org/b/" class="boardlink" title="Random">Random</a></li>
+<li><a href="//boards.4chan.org/r/" class="boardlink" title="Request">Request</a></li>
+<li><a href="//boards.4chan.org/r9k/" class="boardlink" title="ROBOT9001">ROBOT9001</a></li>
+<li><a href="//boards.4chan.org/pol/" class="boardlink" title="Politically Incorrect">Politically Incorrect</a></li>
+<li><a href="//boards.4chan.org/soc/" class="boardlink" title="Cams &amp; Meetups">Cams &amp; Meetups</a></li>
+<li><a href="//boards.4chan.org/s4s/" class="boardlink" title="Shit 4chan Says">Shit 4chan Says</a></li>
+</ul>
+</div>
+<br class="clear-bug"/>
+</div>
+</div>
+</div>
+<div class="yui-g">
+<div class="yui-u first">
+<div class="box-outer left-box" id="recent-images">
+<div class="box-inner">
+<div class="boxbar">
+<h2>Recent Images</h2>
+</div>
+<div class="boxcontent">
+<ul>
+<li><a href="//boards.4chan.org/trv/thread/850254#p850254" class="boardlink"><img data-pid="850254" data-cmd="post-preview" data-type="image" src="//t.4cdn.org/trv/1400174308843s.jpg" alt="1400174308.png" width="250" height="234"/></a></li>
+<li><a href="//boards.4chan.org/mlp/thread/17771663#p17775617" class="boardlink"><img data-pid="17775617" data-cmd="post-preview" data-type="image" src="//t.4cdn.org/mlp/1400178042399s.jpg" alt="1400178042.jpg" width="105" height="125"/></a></li>
+<li><a href="//boards.4chan.org/mlp/thread/17528582#p17775610" class="boardlink"><img data-pid="17775610" data-cmd="post-preview" data-type="image" src="//t.4cdn.org/mlp/1400177971841s.jpg" alt="1400177971.png" width="125" height="125"/></a></li>
+</ul>
+<script type="text/javascript">
+  PostList.set('image', {"850254":{"board":"trv","type":"ws","no":"850254","resto":"0","name":"Grizz","email":"","sub":"I need out and I need it soon.","com":"So,\/trv\/I come to you of all people since I really don&#039;t know where to go.<br><br>I&#039;m an 18 year old guy who resides in the United kingdom,right besides liverpool. I&#039;m looking for a way out of the UK,something legal of course but nevertheless,a way out.<br><br>I didn&#039;t get much with regards to decent schooling so my grades are god awful,but I know there&#039;s alternatives.<br><br>The reason I&#039;m asking is because I&#039;d like to move to California,due to some of my closest friend&#039;s living there. I don&#039;t really have any friends where I am, nor do I have much in terms of a decent family. Aka,if I leave,I wouldn&#039;t really be leaving much behind.<br><br>What kind of jobs would be available there that differ from those you&#039;re usually nagged to get into through college and highschool?<br><br>Any idea on jobs I could take training for that may help me out and get me to Cali?<br><br>I don&#039;t care what job it is,as long as its something physical and doesn&#039;t involve me sitting around all day,then alls good.<br>I&#039;ll look into training of whatever it is and see if its something I can do.<br><br>I can&#039;t get a study visa because of the whole &quot;GPA needing 3.0 or above!&quot; bullcrap,so thats unfortunately out of the question.<br><br>But for future reference,I need to know what life in cali would actually be like for a britfag such as myself.<br>Will I be treated like crap upon arrival or will I just blend in like a meatball under a pile of spaghetti?<br><br>And no,I&#039;m not going to go with the whole &quot;Well OP,you&#039;re screwed,might as well kill yourself&quot; because that&#039;d be a waste of 18 years.<br><br>If nobody here can help me out,please direct me to somewhere that can.<br><br>Thanks in advance.","id":"","capcode":"none","now":"05\/15\/14(Thu)13:18:28","ext":".png","fsize":"76331","tim":"1400174308843","tn_w":"250","tn_h":"234","filename":"nope","w":"322","h":"302"},"17775617":{"board":"mlp","type":"ws","no":"17775617","resto":"17771663","name":"Anonymous","email":"","sub":"","com":"&gt;&gt;17775217<br>Don&#039;t be so hard on yourself drawfag.<br>Your art is 10\/10.","id":"","capcode":"none","now":"05\/15\/14(Thu)14:20:42","ext":".jpg","fsize":"784364","tim":"1400178042399","tn_w":"105","tn_h":"125","filename":"1400102736023","w":"1772","h":"2092"},"17775610":{"board":"mlp","type":"ws","no":"17775610","resto":"17528582","name":"Anonymous","email":"","sub":"","com":"&gt;&gt;17762856<br>I like TV butt","id":"","capcode":"none","now":"05\/15\/14(Thu)14:19:31","ext":".png","fsize":"32642","tim":"1400177971841","tn_w":"125","tn_h":"125","filename":"pointy_ponysona_avatar_by_wictae-d6vkv9f","w":"480","h":"480"}});
+</script>
+</div>
+</div>
+</div>
+</div>
+<div class="yui-u">
+<div class="box-outer right-box" id="recent-threads">
+<div class="box-inner">
+<div class="boxbar">
+<h2>Latest Posts</h2>
+<div id="options-container" class="yui-skin-sam menubutton"></div>
+</div>
+<div class="boxcontent">
+<ul>
+<li>Sports: <a href="//boards.4chan.org/sp/thread/47523304#p47524763" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="47524763">&gt;Guernsey...</a></li>
+<li>Animals &amp; Nature: <a href="//boards.4chan.org/an/thread/1637119#p1640431" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="1640431">Oh my gosh it&#039;s so wrinkly,...</a></li>
+<li>Weapons: <a href="//boards.4chan.org/k/thread/21190842#p21196065" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="21196065">does anyone have any experience...</a></li>
+<li>Photography: <a href="//boards.4chan.org/p/thread/2317944#p2319836" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="2319836">&gt;he thinks...</a></li>
+<li>Outdoors: <a href="//boards.4chan.org/out/thread/317513#p317708" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="317708">jesus they aren&#039;t rocks marie...</a></li>
+<li>Auto: <a href="//boards.4chan.org/o/thread/10304814#p10306840" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="10306840">If you own an MR2 bookmark twosrus...</a></li>
+<li>Auto: <a href="//boards.4chan.org/o/thread/10304230#p10306843" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="10306843">this is a perfect analogy</a></li>
+<li>Anime/Cute: <a href="//boards.4chan.org/c/thread/2225509#p2225509" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="2225509">Post qt martial artists</a></li>
+<li>Science &amp; Math: <a href="//boards.4chan.org/sci/thread/6535785#p6535785" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="6535785">Tell me everything you know about...</a></li>
+<li>Toys: <a href="//boards.4chan.org/toy/thread/4175655#p4175783" class="boardlink" data-cmd="post-preview" data-type="recent" data-pid="4175783">Hypocrisy at finest</a></li>
+</ul>
+<script type="text/javascript">
+  PostList.set('recent', {"47524763":{"board":"sp","type":"ws","no":"47524763","resto":"47523304","name":"Anonymous","email":"","sub":"","com":"<span class=\"quote\">&gt;Guernsey flag in the crowd<\/span>","id":"","capcode":"none","now":"05\/15\/14(Thu)14:21:43","ext":".jpg","fsize":"16509","tim":"1400178103199","tn_w":"89","tn_h":"125","filename":"Guernsey_FC_Logo","w":"180","h":"251","country":"GB"},"1640431":{"board":"an","type":"ws","no":"1640431","resto":"1637119","name":"Anonymous","email":"","sub":"","com":"&gt;&gt;1639624<br>&gt;&gt;1640202<br>Oh my gosh it&#039;s so wrinkly, cute! What are the quills like on a baby hedgehog right when they are born?","id":"","capcode":"none","now":"05\/15\/14(Thu)14:20:52"},"21196065":{"board":"k","type":"ws","no":"21196065","resto":"21190842","name":"Anonymous","email":"","sub":"","com":"does anyone have any experience with non-firing replicas from denix?<br><br>i&#039;m noguns for several reasons and thinking about buying something just for fingerfucking at home, so i&#039;m wondering if they are accurate and if they feel at least somewhat like the real weapons","id":"","capcode":"none","now":"05\/15\/14(Thu)14:21:41"},"2319836":{"board":"p","type":"ws","no":"2319836","resto":"2317944","name":"Anonymous","email":"","sub":"","com":"&gt;&gt;2319834<br><span class=\"quote\">&gt;he thinks countering bullshit arguments is indicative of buyer&#039;s remorse<\/span><br>so we have you, attacking a brand you don&#039;t like, and me, explaining why you are wrong. and you call me the butthurt one? there&#039;s only one explanation - someone is mad about a camera they don&#039;t own.","id":"","capcode":"none","now":"05\/15\/14(Thu)14:10:02"},"317708":{"board":"out","type":"ws","no":"317708","resto":"317513","name":"Anonymous","email":"","sub":"","com":"&gt;&gt;317690<br>jesus they aren&#039;t rocks marie they are called MINERALS!","id":"","capcode":"none","now":"05\/15\/14(Thu)14:03:03"},"10306840":{"board":"o","type":"ws","no":"10306840","resto":"10304814","name":"Anonymous","email":"","sub":"","com":"If you own an MR2 bookmark twosrus.com","id":"","capcode":"none","now":"05\/15\/14(Thu)14:21:23"},"10306843":{"board":"o","type":"ws","no":"10306843","resto":"10304230","name":"Blurple","email":"","sub":"","com":"&gt;&gt;10306796<br>this is a perfect analogy<br><br>&gt;&gt;10306831<br>yes it can, you must not have read &gt;&gt;10306752.","id":"","capcode":"none","now":"05\/15\/14(Thu)14:21:56","trip":"!5lOC3joIdU"},"2225509":{"board":"c","type":"ws","no":"2225509","resto":"0","name":"Anonymous","email":"","sub":"","com":"Post qt martial artists.","id":"","capcode":"none","now":"05\/15\/14(Thu)14:20:52","ext":".jpg","fsize":"441233","tim":"1400178052135","tn_w":"222","tn_h":"250","filename":"86f848cad9fb799c78053e96fb8217e6e50e30dd","w":"1040","h":"1170"},"6535785":{"board":"sci","type":"ws","no":"6535785","resto":"0","name":"Anonymous","email":"","sub":"","com":"Tell me everything you know about the MERS virus, I&#039;d like to know. To what degree is it contagious? How does it work? What impact do you think it will have? Thanks!","id":"","capcode":"none","now":"05\/15\/14(Thu)14:21:50","ext":".jpg","fsize":"82642","tim":"1400178110355","tn_w":"250","tn_h":"140","filename":"itt this","w":"640","h":"360"},"4175783":{"board":"toy","type":"ws","no":"4175783","resto":"4175655","name":"Anonymous","email":"","sub":"","com":"&gt;&gt;4175710<br>Hypocrisy at finest.<br><br>BTW, what&#039;s going on with the all the bait threads lately?","id":"","capcode":"none","now":"05\/15\/14(Thu)14:21:41"}});
+</script>
+</div>
+</div>
+</div>
+<div class="box-outer right-box" id="popular-threads">
+<div class="box-inner">
+<div class="boxbar">
+<h2>Popular Threads</h2>
+</div>
+<div class="boxcontent">
+<ul>
+<li>Comics &amp; Cartoons: <a href="//boards.4chan.org/co/thread/61845863#p61845863" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="61845863">Story time continues from: &gt;&gt;61830...</a></li>
+<li>Anime &amp; Manga: <a href="//boards.4chan.org/a/thread/107296129#p107296129" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="107296129">Horimiya</a></li>
+<li>Weapons: <a href="//boards.4chan.org/k/thread/21195705#p21195705" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="21195705">Please tell me this isn&#039;t...</a></li>
+<li>Video Game Generals: <a href="//boards.4chan.org/vg/thread/67966093#p67966093" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="67966093">Neptunia General #388</a></li>
+<li>Television &amp; Film: <a href="//boards.4chan.org/tv/thread/44547175#p44547175" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="44547175">Flash Trailer</a></li>
+<li>Video Games: <a href="//boards.4chan.org/v/thread/243673947#p243673947" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="243673947">What games have the best lore?...</a></li>
+<li>Anime &amp; Manga: <a href="//boards.4chan.org/a/thread/107274905#p107274905" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="107274905">Selector Infected WIXOSS</a></li>
+<li>Television &amp; Film: <a href="//boards.4chan.org/tv/thread/44538121#p44538121" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="44538121">Final Judgement: Agents of S.H...</a></li>
+<li>Auto: <a href="//boards.4chan.org/o/thread/10303922#p10303922" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="10303922">I am almost entirely sure that...</a></li>
+<li>Anime &amp; Manga: <a href="//boards.4chan.org/a/thread/107299254#p107299254" class="boardlink" data-cmd="post-preview" data-type="popular" data-pid="107299254">Samurai Flamenco Thread</a></li>
+</ul>
+<script type="text/javascript">
+  PostList.set('popular', {"61845863":{"board":"co","type":"ws","no":"61845863","resto":"0","name":"Anonymous","email":"","sub":"","com":"Story time continues from: &gt;&gt;61830066<br><br>First story time: http:\/\/archive.foolz.us\/co\/thread\/6<wbr>1808791\/#61808791","id":"","capcode":"none","now":"05\/15\/14(Thu)11:29:26","ext":".png","fsize":"469505","tim":"1400167766072","tn_w":"250","tn_h":"187","filename":"Untitled1","w":"640","h":"480"},"107296129":{"board":"a","type":"ws","no":"107296129","resto":"0","name":"Anonymous","email":"","sub":"Horimiya","com":"Did anyone watch the OVAs now that they&#039;re both subbed? I like Hori and Miyamura&#039;s portrayal in the new manga better than the web comic adaptation.","id":"","capcode":"none","now":"05\/15\/14(Thu)11:43:24","ext":".jpg","fsize":"137382","tim":"1400168604493","tn_w":"250","tn_h":"128","filename":"origanal","w":"850","h":"437"},"21195705":{"board":"k","type":"ws","no":"21195705","resto":"0","name":"Anonymous","email":"","sub":"","com":"Please tell me this isn&#039;t an acutal weapon system and DICE just pulled that out of their ass.<br><br>http:\/\/www.youtube.com\/watch?v=_Uf3<wbr>BPsjsKo&amp;t=30","id":"","capcode":"none","now":"05\/15\/14(Thu)13:35:44","ext":".jpg","fsize":"40040","tim":"1400175344506","tn_w":"250","tn_h":"126","filename":"uuuuh-what","w":"720","h":"363"},"67966093":{"board":"vg","type":"ws","no":"67966093","resto":"0","name":"Anonymous","email":"","sub":"Neptunia General #388","com":"Last Thread &gt;&gt;67542312<br><br>Hyperdimension Neptunia Downloads (Skins, Artbooks, Manga, Guides, Soundtracks, etc.): http:\/\/pastebin.com\/sbYrWg5t<br><br>Disturbingly sexualized discussion go~","id":"","capcode":"none","now":"05\/13\/14(Tue)16:41:44","ext":".jpg","fsize":"113231","tim":"1400013704794","tn_w":"250","tn_h":"141","filename":"vertxIF","w":"960","h":"544"},"44547175":{"board":"tv","type":"ws","no":"44547175","resto":"0","name":"Anonymous","email":"","sub":"Flash Trailer","com":"Are you ready?<br><br>https:\/\/www.youtube.com\/watch?v=Yj0<wbr>l7iGKh8g","id":"","capcode":"none","now":"05\/15\/14(Thu)12:50:44","ext":".png","fsize":"1061222","tim":"1400172644192","tn_w":"250","tn_h":"140","filename":"url","w":"1280","h":"720"},"243673947":{"board":"v","type":"ws","no":"243673947","resto":"0","name":"Anonymous","email":"","sub":"","com":"What games have the best lore?","id":"","capcode":"none","now":"05\/15\/14(Thu)13:22:35","ext":".jpg","fsize":"318948","tim":"1400174555162","tn_w":"250","tn_h":"149","filename":"pay the price","w":"1280","h":"765"},"107274905":{"board":"a","type":"ws","no":"107274905","resto":"0","name":"Anonymous","email":"","sub":"Selector Infected WIXOSS","com":"Akilucky&#039;s death episode anticipation thread.","id":"","capcode":"none","now":"05\/14\/14(Wed)23:34:51","ext":".jpg","fsize":"63266","tim":"1400124891083","tn_w":"250","tn_h":"140","filename":"pirurukuchan","w":"1192","h":"668"},"44538121":{"board":"tv","type":"ws","no":"44538121","resto":"0","name":"Anonymous","email":"","sub":"Final Judgement: Agents of S.H.I.E.L.D. Season 1","com":"Since SHIELD managed to get renewed lets talk about the season 1.<br><br>It started off pretty fucking lame and mediocre, with the plot and character development going nowhere with a lot of hinted potential but no pay off. Things started turning around TRACKS, which was episode 15 or so and heated up on the Cap 2 crossover. The last quarter of the season IMO finally hit stride and while it wasnt the best SHIELD could&#039;ve been it showed a lot of great stuff. Ward turning evil was unexpected and probably the most entertaining element of the entire goddamn season, much more than Coulson&#039;s alien party mix and Skye&#039;s 2mysteriusl4u background. I was happy when she got shot and sad when she survived. But also in the last six or seven episodes she&#039;s had character growth which makes me hate her slightly less. Only slightly mind you. FitzSimmons were annoying and useless most of the season but that final scene when Fitz tells Simmons he loves her and willingly sacrifices himself was gold. Jackson shouldnt&#039;ve even been in the episode. If it werent for the scene where he talks to Simmons, I&#039;d have thought him to be a hallucination when he shows up to help Coulson. And SHIELD managed to finally come somewhat close to Arrows level of stunt work and fight choreography with the May\/Ward fight.<br><br>tl;dr SHIELD started as crap but ended somewhat okay.","id":"","capcode":"none","now":"05\/15\/14(Thu)05:14:41","ext":".jpg","fsize":"6100","tim":"1400145281117","tn_w":"250","tn_h":"174","filename":"shield_cast","w":"269","h":"188"},"10303922":{"board":"o","type":"ws","no":"10303922","resto":"0","name":"Anonymous","email":"","sub":"","com":"I am almost entirely sure that I&#039;m buying a new 2014 GT500 tomorrow. Has anyone here ever driven one? Convince me to do or not do this, and I will not only post bread on hood, I will put whatever thing you people collectively want on my license plate.","id":"","capcode":"none","now":"05\/15\/14(Thu)00:15:19","ext":".jpg","fsize":"238486","tim":"1400127319717","tn_w":"250","tn_h":"166","filename":"image","w":"1280","h":"850"},"107299254":{"board":"a","type":"ws","no":"107299254","resto":"0","name":"Anonymous","email":"","sub":"Samurai Flamenco Thread","com":"Decadence edition~","id":"","capcode":"none","now":"05\/15\/14(Thu)13:16:39","ext":".jpg","fsize":"149537","tim":"1400174199979","tn_w":"250","tn_h":"140","filename":"decadence","w":"1920","h":"1080"}});
+</script>
+</div>
+</div>
+</div>
+<div class="box-outer right-box">
+<div class="box-inner">
+<div class="boxbar">
+<h2>Stats</h2>
+</div>
+<div class="boxcontent">
+<ul>
+<li>Total Posts: 1,559,581,833</li>
+<li>Current Users: 154,469</li>
+<li>Active Content: 140 GB</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="ft">
+<ul>
+<li class="fill"/>
+<li class="first"><a href="//www.4chan.org/">Home</a></li>
+<li><a href="//www.4chan.org/news">News</a></li>
+<li><a href="http://blog.4chan.org/">Blog</a></li>
+<li><a href="//www.4chan.org/faq">FAQ</a></li>
+<li><a href="//www.4chan.org/rules">Rules</a></li>
+<li><a href="//www.4chan.org/pass">Support 4chan</a></li>
+<li><a href="//www.4chan.org/advertise">Advertise</a></li>
+<li><a href="//www.4chan.org/press">Press</a></li>
+<li><a href="//www.4chan.org/japanese">日本語</a></li>
+ 
+</ul>
+<br class="clear-bug"/>
+<div id="copyright"><a href="/faq#what4chan">About</a> &bull; <a href="/feedback">Feedback</a> &bull; <a href="/contact">Contact</a><br/>
+Copyright &copy; 2003-2014 4chan. All rights reserved.
+</div>
+</div>
+</div>
+<script type="text/javascript" src="//s.4cdn.org/js/fp-combined-compiled.11.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+function announceCloseClick() {
+  document.getElementById("announce").style.overflow = 'hidden';
+  var anim = new YAHOO.util.Anim('announce', { height: { to: 0 }, padding: { to : 0 } }, 0.25);
+  anim.onComplete.subscribe(function(){var el=this.getEl();el.parentNode.removeChild(el);});
+  anim.animate();
+  if (this.hasAttribute('data-annc')) {
+    createCookie('annc', this.name.replace(/^annc/,""), 365);
+  }
+  else {
+    createCookie('wi4c', '1', 365);
+  }
+  return false;
+}
+
+YAHOO.util.Event.addListener(YAHOO.util.Dom.getElementsByClassName("closebutton","a","announce"), "click", announceCloseClick);
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+//if (width > 480){
+var dialog = new YAHOO.widget.SimpleDialog("disclaimer-dialog", {
+  width: "300px",
+  fixedcenter: true,
+  modal: true,
+  visible: false,
+  draggable: false,
+  iframe: false,
+  effect: YAHOO.env.ua.gecko ? {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.25} : null
+});
+
+var disclaimerHref;
+function disclaimerAgree() {
+  createCookie('4chan_disclaimer', 1, 365);
+  location.href = disclaimerHref;
+}
+function disclaimerCancel() {
+  dialog.hide();
+}
+function disclaimerLinkClick(e) {
+  if(e.altKey || e.ctrlKey || e.shiftKey || e.metaKey) return true;
+  disclaimerHref = this.href;
+  dialog.show();
+  if(e.preventDefault) e.preventDefault();
+  return false;
+}
+
+dialog.setHeader("<h2>Disclaimer</h2>");
+dialog.setBody("<p>To access this section of the website, you must agree to the following:<ol><li>The content of this website is for mature audiences only and may not be suitable for minors. If you are a minor or it is illegal for you to access mature images and language, do not proceed.</li><br /><li>This site is presented to you AS IS, with no warranty, express or implied. By clicking \"I Agree,\" you agree not to hold 4chan responsible for any damages from your use of the site.</li><br /><li>As a condition of using this site, you must fully understand, and comply with the rules of 4chan.org, which may be located by following the \"<a href=\"/rules\">Rules</a>\" link on the home page.</li></ol>");
+dialog.cfg.queueProperty("buttons", [ { text: "I Agree", handler: disclaimerAgree, isDefault: true }, { text: "Cancel", handler: disclaimerCancel } ]);
+dialog.render(document.body);
+
+if (!/Mobile|Android|Dolfin|Opera Mobi/.test(navigator.userAgent)) {
+    YAHOO.util.Event.addListener(YAHOO.util.Dom.getElementsByClassName("boardlink","a"), "click", disclaimerLinkClick);
+}
+
+filterButtonMenu.getItem(0, 0).cfg.setProperty("checked", true);
+filterButtonMenu.getItem(1, 1).cfg.setProperty("checked", true);
+optionButtonMenu.getItem(0).cfg.setProperty("checked", true);
+/*]]>*/
+</script>
+<div id="modal-bg"></div>
+</body>
+</html>
