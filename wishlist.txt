@@ -1,0 +1,9 @@
+add replay to re-listen to the last voice
+add slowdown and playback speed change options
+run the thing as daemon. figure out how to do that reasonably
+play a nice low tone as a post seperator when there are more than three of them or so
+add actual decent update checking. none of this rebuilding the entire thread stuff
+building on the last note, change the data structure to a per-post list, so we get replay more easily, as well as history browsing and voice change.
+
+more ambitious:
+change the thing to a lightweight multithreaded producer-consumer model.
