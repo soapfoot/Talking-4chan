@@ -1,8 +1,12 @@
-import urllib2, subprocess
+import urllib2, subprocess, time
 from bs4 import BeautifulSoup, Tag
 from contextlib import closing
 
 post_class_name = 'postMessage' #'postContainer replyContainer'
+pause_between_posts = 1 # seconds
+small_pause = .1
+
+thread_url = 'https://boards.4chan.org/co/thread/61852835/homestuck-general#p61859189'
 
 def parse_post(post):
     for line in post:
@@ -51,22 +55,31 @@ def get_posts(url):
                     print 'Plain text:', child
                     parsed = (child, 'normal')
                 parsed_posts.append(parsed)
+            parsed_posts.append(('', 'post_end'))
     return parsed_posts
 
 
 # vocalize a [(text, context)] array based on the context
 # need to insert blank spots, or add waiting between posts.
 # often they flow together uncomfortably.
+
+# having second thoughts about alex. he's kinda jarring and also not very fitting for the tone :/
+
 def vocalize_in_context(voices):
     for text,context in voices:
-        if context == 'normal':
+        if context == 'post_end':
+            time.sleep(small_pause)
+            #say('e', 'Agnes') # end of post signifier todo: play a tone instead of an awkward letter
+            time.sleep(pause_between_posts)
+            continue
+        elif context == 'normal':
             speaker = 'Kathy' # much better
 
         elif context == 'spoiler':
             speaker = 'Whisper' # perfect
 
         elif context == 'greentext':
-            speaker = 'Alex' # better. i like how he sounds more aggressive. fits well
+            speaker = 'Trinoids' # better. i like how he sounds more aggressive. fits well
             text = text[1:] # omit the '>' todo: add text stripping to all of these
         elif context == 'quotelink':
             speaker = 'Kathy'
@@ -86,15 +99,31 @@ def main():
     # say('Yolo live once negroes','Pipe Organ')
     #vocalize_in_context([('implying i will read all of that fucking text', 'greentext')])#, ("pants sluts for ever uguu~", 'spoiler'),
         #('wearing a fedora tunic in winter', 'greentext')])
-    posts = get_posts('https://boards.4chan.org/co/thread/61850685/rip-detective-quentin-the-cross-lance')
 
-    vocalize_in_context(posts)
 
-    # todo: group everything into a post.
-    for text, mode in posts:
-        print '--- --- ---'
-        print 'Mode = ', mode
-        print 'Text = ', text
+
+
+
+
+    #response = urllib2.urlopen(thread_url)
+
+    #last_modified = response.info().get('Last-Modified', False)
+    #print last_modified
+
+
+    # laziest possible solution
+    posts = get_posts(thread_url)
+    while True:
+        new_posts = get_posts(thread_url)
+        if len(new_posts) > len(posts):
+            vocalize_in_context(new_posts[len(posts):])
+            posts = new_posts
+        else:
+            print "Waiting for new replies..."
+            time.sleep(10)
+
+    #vocalize_in_context(posts)
+
 
 
 if __name__ == '__main__':
