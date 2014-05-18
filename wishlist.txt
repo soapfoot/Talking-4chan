@@ -5,6 +5,17 @@ play a nice low tone as a post seperator when there are more than three of them 
 add actual decent update checking. none of this rebuilding the entire thread stuff
 building on the last note, change the data structure to a per-post list, so we get replay more easily, as well as history browsing and voice change.
 
+add a skip button to the currect post
+
+do something with the posted images
+google image search to find most likely candidate?
+
+rewind using tackpad
+
+add “angel said …” etc for names/trips
+
+make capslock sound louder
+
 add hsg tracking through the catalog. maybe check and see if external links are defined differently, and then attempt to follow them?
 can also search keywords through catalog and apply heuristics and all storts of stuff that’s way too fancy.
 

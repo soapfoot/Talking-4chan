@@ -22,41 +22,44 @@ def parse_post(post):
     pass
 
 
-def get_posts(page):
+def get_posts(url):
     parsed_posts = []
-    soup = BeautifulSoup(page)
+    # need to make sure page is closed after reading.
+    # not really sure if this works, double check later
+    with closing(urllib2.urlopen(url)) as page:
+        soup = BeautifulSoup(page.read())
+        posts = soup.find_all(class_=post_class_name)
+        for post in posts:
+            #print '\n--- Post ---\n'#, post.prettify(), '\n'
 
-    posts = soup.find_all(class_=post_class_name)
-    for post in posts:
-        #print '\n--- Post ---\n'#, post.prettify(), '\n'
-        for child in post.children:
-            if isinstance(child, Tag):
-                if child.text.strip() == '':
-                    continue
-                child_class = None
-                if child.get('class') is not None:
-                    child_class = child.get('class')[0]
-                if child_class is not None:
-                    if child_class == 'quotelink':
-                        # print 'Quotelink: ', child, '\ntext = ', child.text
-                        parsed = (child.text, 'quotelink')
-                    elif child_class == 'quote':
-                        # print 'Greentext: ', child, '\nText = ', child.text
-                        parsed = (child.text, 'greentext')
-                elif '<s>' in str(child) and '</s>' in str(child):
-                    # print 'Spoiler: ', child.text
-                    parsed = (child.text, 'spoiler')
+            for child in post.children:
+                if isinstance(child, Tag):
+                    if child.text.strip() == '':
+                        continue
+                    child_class = None
+                    if child.get('class') is not None:
+                        child_class = child.get('class')[0]
+                    if child_class is not None:
+                        if child_class == 'quotelink':
+                            # print 'Quotelink: ', child, '\ntext = ', child.text
+                            parsed = (child.text, 'quotelink')
+                        elif child_class == 'quote':
+                            # print 'Greentext: ', child, '\nText = ', child.text
+                            parsed = (child.text, 'greentext')
+                    elif '<s>' in str(child) and '</s>' in str(child):
+                        # print 'Spoiler: ', child.text
+                        parsed = (child.text, 'spoiler')
+                    else:
+                        # print 'Mystery text:', child
+                        parsed = (child.text, 'mystery')
                 else:
-                    # print 'Mystery text:', child
-                    parsed = (child.text, 'mystery')
-            else:
-                # print 'Plain text:', child
-                parsed = (child, 'normal')
-            # sanitize text
-            #TODO: make this better
-            parsed = (parsed[0].replace('-',' '), parsed[1])
-            parsed_posts.append(parsed)
-        parsed_posts.append(('', 'post_end'))
+                    # print 'Plain text:', child
+                    parsed = (child, 'normal')
+                # sanitize text
+                #TODO: make this better
+                parsed = (parsed[0].replace('-',' '), parsed[1])
+                parsed_posts.append(parsed)
+            parsed_posts.append(('', 'post_end'))
     return parsed_posts
 
 
@@ -103,37 +106,24 @@ def main():
 
 
 
-    response = urllib2.urlopen(thread_url)
+    #response = urllib2.urlopen(thread_url)
 
-    last_modified = response.info().get('Last-Modified', False)
-    print last_modified, 'type = ', type(last_modified)
+    #last_modified = response.info().get('Last-Modified', False)
+    #print last_modified
 
-    # Sun, 18 May 2014 03:52:32 GMT
-    # Sun, 18 May 2014 03:55:15 GMT
 
     # external thread specc'd by:
     # /co/thread/61864382#p61864382
     # so you can probably just blindly copy and paste into the url.
 
     # laziest possible solution
-    posts = get_posts(response.read())
-    response.close()
-
+    posts = get_posts(thread_url)
     if read_all == True:
         vocalize_in_context(posts)
     while True:
-        response = urllib2.urlopen(thread_url)
-        modified = response.info().get('Last-Modified', False)
-        print 'last modified at:', modified
-
-        if modified != last_modified:
-            print 'found a new post'
-            last_modified = modified
-
-            new_posts = get_posts(response.read())
-            response.close()
-
-            vocalize_in_context(new_posts[len(posts):]) # still too fucking lazy
+        new_posts = get_posts(thread_url)
+        if len(new_posts) > len(posts):
+            vocalize_in_context(new_posts[len(posts):])
             posts = new_posts
         else:
             print "Waiting for new replies..."
