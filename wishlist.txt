@@ -21,7 +21,9 @@ can also search keywords through catalog and apply heuristics and all storts of 
 
 good ideas:
 export the labeled text strings as CSV to set aside for neural network training.
-
+UPDATE: added the tracking, but currently the csv files have a risk of being dirty, 
+because re running the code will append the same data twice. before using this data it
+must be run through something that removes exact matches. 
 
 more ambitious:
 change the thing to a lightweight multithreaded producer-consumer model.
