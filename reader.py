@@ -2,11 +2,13 @@ import urllib2, subprocess, time, csvlogger
 from bs4 import BeautifulSoup, Tag
 from contextlib import closing
 
-post_class_name = 'postMessage' # specific to four channel. brittle.
-pause_between_posts = 1         # time paused between posts. in seconds
-small_pause = .1                # small pause used before playing the post separator tone. also in seconds
-read_all = False                # read all the posts out loud on the first connection? will drone on for a while if
-                                # it's a long thread
+post_class_name = 'postMessage'          # specific to four channel. brittle.
+pause_between_posts = 2.0                # time paused between posts. in seconds
+small_pause = .1                         # small pause used before playing the post separator tone. also in seconds
+tone_volume = 0.02                       # volume of the separator tone. best kept very low
+tone_separator_filename = 'low_tone.wav' # filename of the post separator tone
+read_all = False                          # read all the posts out loud on the first connection? will drone on for a
+                                         # while if it's a long thread
 debug = False
 
 thread_url = 'https://boards.4chan.org/co/thread/61926344/homestuck-general'
@@ -76,8 +78,9 @@ def vocalize_in_context(voices):
     for text,context in voices:
         if context == 'post_end':
             time.sleep(small_pause)
-            #say('e', 'Agnes') # end of post signifier todo: play a tone instead of an awkward letter
-            time.sleep(pause_between_posts)
+            # play a quiet low tone for a short time
+            play(tone_separator_filename, str(pause_between_posts/2), str(tone_volume))
+            time.sleep(pause_between_posts/2)
             continue
         elif context == 'normal':
             speaker = 'Kathy' # much better
@@ -100,8 +103,14 @@ def vocalize_in_context(voices):
 
     return
 
+# built in text to speech with say program builtin on osx
 def say(text, voice):
     subprocess.check_call(['say', text, '-v', voice])
+    return
+
+# plays a file with afplay
+def play(filename, playtime, volume):
+    subprocess.check_call(['afplay', filename, '-t', playtime, '-v', volume])
     return
 
 def main():
