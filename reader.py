@@ -111,20 +111,23 @@ def main():
     # get the last time the page was modified. since the posts are added by appending them to the current page,
     # this allows us to check and see if there are any new posts we should read out
     last_modified = response.info().get('Last-Modified', False)
-    print last_modified, 'type = ', type(last_modified)
+    if debug:
+        print last_modified, 'type = ', type(last_modified)
 
     posts = get_posts(response.read())
     response.close()
 
     #csvlogger.log(log_file_name, posts) # currently does nothing to prevent duplication of data todo: fix this
+                                         # so it needs to be run once in the beginning, then commented out
 
-    if read_all == True:
+    if read_all:
         vocalize_in_context(posts)
 
     while True: # should really be: while thread hasn't 404'd:
         response = urllib2.urlopen(thread_url)
         modified = response.info().get('Last-Modified', False)
-        print 'last modified at:', modified
+        if debug:
+            print 'last modified at:', modified
 
         # since the only way they might not be equal is if the page has been updated, we assume it has been updated
         # with new posts. we then process these new posts.
@@ -136,7 +139,7 @@ def main():
                                                    # need to cut out only the new posts and only process those
             response.close()
             vocalize_in_context(new_posts[len(posts):]) # still too damn lazy
-            csvlogger.log(log_file_name, new_posts) # write the post text and category to a csv file for later use
+            csvlogger.log(log_file_name, new_posts)     # write the post text and category to a csv file for later use
             posts = new_posts
         else:
             if debug:
@@ -151,6 +154,8 @@ def main():
     # switch over to that thread. still have a corner case where thread gets deleted without a link to the new one.
     # we can sit on the archive and look for hsgs. need to keep track of, which threads we've already been in, and
     # only visit more recent ones.
+
+    # just realized thread OP post number is a perfectly fine unique thread id
 
 
 
