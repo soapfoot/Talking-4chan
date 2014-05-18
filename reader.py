@@ -1,4 +1,4 @@
-import urllib2, subprocess, time
+import urllib2, subprocess, time, csvlogger
 from bs4 import BeautifulSoup, Tag
 from contextlib import closing
 
@@ -8,6 +8,7 @@ small_pause = .1
 read_all = False # read all the posts on the first connection?
 
 thread_url = 'https://boards.4chan.org/co/thread/61926344/homestuck-general'
+log_file_name = thread_url.replace('/','_') + '.csv'
 
 def parse_post(post):
     for line in post:
@@ -119,6 +120,8 @@ def main():
     posts = get_posts(response.read())
     response.close()
 
+    csvlogger.log(log_file_name, posts) # currently does nothing to prevent duplication of data todo: fix this
+
     if read_all == True:
         vocalize_in_context(posts)
     while True:
@@ -134,6 +137,7 @@ def main():
             response.close()
 
             vocalize_in_context(new_posts[len(posts):]) # still too fucking lazy
+            csvlogger.log(log_file_name, new_posts)
             posts = new_posts
         else:
             print "Waiting for new replies..."
